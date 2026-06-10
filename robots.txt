@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block data folder from direct indexing (it's served via JS)
+Disallow: /data/
+
+# Sitemap location
+Sitemap: https://sscexamprep.online/sitemap.xml
