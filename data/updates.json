@@ -1,4 +1,10 @@
+
+
 {
+  "_note": "HOW TO ADD NEW UPDATES: Copy any item below, paste at the TOP of the 'items' array, change the id (increment by 1), fill in details. Types: result | admit | answer | notif | job",
+  "_lastUpdated": "2025-06-10",
+  "items": [
+    {
   "id": 13,
   "title": "SSC CGL 2026 Notification Released — Apply Online, Check Vacancies, Eligibility & Exam Dates",
   "type": "notif",
@@ -9,11 +15,6 @@
   "officialLink": "https://ssc.gov.in"
 },
 
-
-{
-  "_note": "HOW TO ADD NEW UPDATES: Copy any item below, paste at the TOP of the 'items' array, change the id (increment by 1), fill in details. Types: result | admit | answer | notif | job",
-  "_lastUpdated": "2025-06-10",
-  "items": [
     {
       "id": 12,
       "title": "SSC CGL 2024 Tier-II Final Result Declared — Download Marks at ssc.gov.in",
