@@ -1,0 +1,126 @@
+{
+  "_note": "HOW TO ADD NEW UPDATES: Copy any item below, paste at the TOP of the 'items' array, change the id (increment by 1), fill in details. Types: result | admit | answer | notif | job",
+  "_lastUpdated": "2025-06-10",
+  "items": [
+    {
+      "id": 12,
+      "title": "SSC CGL 2024 Tier-II Final Result Declared — Download Marks at ssc.gov.in",
+      "type": "result",
+      "exam": "SSC CGL",
+      "date": "10 Jun 2025",
+      "isNew": true,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 11,
+      "title": "SSC CHSL 2024 Tier-I Admit Card Released — Download via DigiLocker / ssc.gov.in",
+      "type": "admit",
+      "exam": "SSC CHSL",
+      "date": "09 Jun 2025",
+      "isNew": true,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 10,
+      "title": "SSC CPO 2024 Paper-I Answer Key Released — Raise Objections by 15 June 2025",
+      "type": "answer",
+      "exam": "SSC CPO",
+      "date": "08 Jun 2025",
+      "isNew": true,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 9,
+      "title": "SSC GD 2025 Notification Out — 13,500 Posts for CISF, BSF, CRPF, ITBP, SSB, Assam Rifles",
+      "type": "notif",
+      "exam": "SSC GD",
+      "date": "07 Jun 2025",
+      "isNew": true,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 8,
+      "title": "SSC MTS 2025 Online Application Last Date Extended to 30 June 2025",
+      "type": "notif",
+      "exam": "SSC MTS",
+      "date": "05 Jun 2025",
+      "isNew": false,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 7,
+      "title": "SSC JE 2024 Paper-II Result Declared — Final Merit List Available",
+      "type": "result",
+      "exam": "SSC JE",
+      "date": "03 Jun 2025",
+      "isNew": false,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 6,
+      "title": "SSC CGL 2025 Notification Expected — 17,000+ Vacancies Anticipated",
+      "type": "notif",
+      "exam": "SSC CGL",
+      "date": "01 Jun 2025",
+      "isNew": false,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 5,
+      "title": "SSC CHSL 2024 Tier-I Answer Key Finalized After Objection Window",
+      "type": "answer",
+      "exam": "SSC CHSL",
+      "date": "28 May 2025",
+      "isNew": false,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 4,
+      "title": "SSC Stenographer Grade C & D 2025 Notification — 1500 Vacancies",
+      "type": "notif",
+      "exam": "SSC Steno",
+      "date": "25 May 2025",
+      "isNew": false,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 3,
+      "title": "SSC CPO 2025 Notification — Sub-Inspector in Delhi Police & CAPFs",
+      "type": "notif",
+      "exam": "SSC CPO",
+      "date": "20 May 2025",
+      "isNew": false,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 2,
+      "title": "SSC MTS 2025 Notification Released — Apply for Multitasking Staff & Havaldar Posts",
+      "type": "notif",
+      "exam": "SSC MTS",
+      "date": "15 May 2025",
+      "isNew": false,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    },
+    {
+      "id": 1,
+      "title": "SSC CGL 2023 Tier-III Result — Document Verification Schedule Released",
+      "type": "result",
+      "exam": "SSC CGL",
+      "date": "10 May 2025",
+      "isNew": false,
+      "link": "https://ssc.gov.in",
+      "officialLink": "https://ssc.gov.in"
+    }
+  ]
+}
