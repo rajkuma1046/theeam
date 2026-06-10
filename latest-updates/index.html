@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="../favicon.png">
 
   <!-- SEO -->
   <title>Latest SSC Updates 2025 — Results, Admit Cards, Answer Keys, Notifications | SSCExamPrep</title>
@@ -64,7 +65,6 @@
     .filter-tab[data-type="result"].active { background: var(--blue); border-color: var(--blue); }
     .filter-tab[data-type="admit"].active  { background: var(--amber-dark); border-color: var(--amber-dark); }
     .filter-tab[data-type="answer"].active { background: var(--purple); border-color: var(--purple); }
-    .filter-tab[data-type="notif"].active  { background: var(--emerald); border-color: var(--emerald); }
     .filter-tab[data-type="job"].active    { background: var(--red); border-color: var(--red); }
 
     /* Update cards (full-width on this page) */
@@ -91,7 +91,6 @@
       .updates-main { padding: 28px 32px 60px; }
     }
   </style>
-  <link rel="icon" type="image/png" href="/favicon.png">
 </head>
 <body>
 
@@ -120,7 +119,7 @@
 <header class="site-header" role="banner">
   <div class="wrap header-inner">
     <a href="/" class="logo" aria-label="SSC Exam Prep — Home">
-      <img src="/favicon.png" alt="SSC Exam Prep" class="logo-mark">
+      <img src="../favicon.png" alt="SSC Exam Prep" class="logo-mark">
       <div class="logo-text">
         <strong>SSCExamPrep</strong>
         <small>Your Govt. Exam Guide</small>
@@ -206,8 +205,7 @@
     <button class="filter-tab" data-type="result"  aria-pressed="false">📊 Results</button>
     <button class="filter-tab" data-type="admit"   aria-pressed="false">🪪 Admit Cards</button>
     <button class="filter-tab" data-type="answer"  aria-pressed="false">🗝️ Answer Keys</button>
-    <button class="filter-tab" data-type="notif"   aria-pressed="false">🔔 Notifications</button>
-    <button class="filter-tab" data-type="job"     aria-pressed="false">💼 Jobs</button>
+    <button class="filter-tab" data-type="job"     aria-pressed="false">💼 Latest Jobs</button>
   </div>
 
   <!-- Count label -->
@@ -304,12 +302,24 @@
       });
     });
 
-    // Handle ?q= in URL
+    // Handle ?q= and ?filter= in URL
     const params = new URLSearchParams(window.location.search);
     const q = params.get('q');
     if (q) {
       const si = document.getElementById('searchInput');
       if (si) { si.value = q; }
+    }
+    const filter = params.get('filter') || params.get('type');
+    if (filter) {
+      const tab = document.querySelector(`.filter-tab[data-type="${filter}"]`);
+      if (tab) {
+        document.querySelectorAll('.filter-tab').forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-pressed', 'false');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-pressed', 'true');
+      }
     }
   });
 </script>

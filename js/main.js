@@ -51,9 +51,10 @@ const TYPE_CFG = {
   result: { label: 'Result',       dot: 'result', tag: 'badge-result', tagText: 'result' },
   admit:  { label: 'Admit Card',   dot: 'admit',  tag: 'badge-admit',  tagText: 'admit' },
   answer: { label: 'Answer Key',   dot: 'answer', tag: 'badge-answer', tagText: 'answer' },
-  notif:  { label: 'Notification', dot: 'notif',  tag: 'badge-notif',  tagText: 'notif' },
-  job:    { label: 'Job',          dot: 'job',    tag: 'badge-job',    tagText: 'job' },
+  notif:  { label: 'Latest Job',   dot: 'job',    tag: 'badge-job',    tagText: 'job' },
+  job:    { label: 'Latest Job',   dot: 'job',    tag: 'badge-job',    tagText: 'job' },
 };
+
 
 function buildUpdateCard(u) {
   const cfg = TYPE_CFG[u.type] || TYPE_CFG.notif;
@@ -102,7 +103,9 @@ function filterUpdates() {
   const query = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
 
   const filtered = allUpdates.filter(u => {
-    const typeMatch = activeType === 'all' || u.type === activeType;
+    const typeMatch = activeType === 'all' || 
+                      u.type === activeType || 
+                      (activeType === 'job' && u.type === 'notif');
     const textMatch = !query ||
       u.title.toLowerCase().includes(query) ||
       u.exam.toLowerCase().includes(query);
@@ -145,6 +148,11 @@ async function loadUpdates() {
 
     // Populate ticker
     buildTicker(allUpdates.slice(0, 8));
+
+    // Filter on page load if grid is present (to support pre-selected filter tabs)
+    if (document.getElementById('updatesGrid')) {
+      filterUpdates();
+    }
 
   } catch (err) {
     console.warn('Could not load updates.json — using fallback');
