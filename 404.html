@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | SSCExamPrep</title>
+  <meta name="description" content="Oops! The page you're looking for doesn't exist. Find SSC CGL, CHSL, GD, MTS exam updates and resources at SSCExamPrep.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://sscexamprep.online/404.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <style>
+    /* ====== 404 Page Specific Styles ====== */
+    body { min-height: 100vh; display: flex; flex-direction: column; }
+
+    .error-page {
+      flex: 1;
+      background: linear-gradient(135deg, #0A2342 0%, #163560 40%, #1E4B8A 75%, #0A2342 100%);
+      display: flex; align-items: center; justify-content: center;
+      padding: 40px 16px 120px;
+      position: relative; overflow: hidden;
+      min-height: 100vh;
+    }
+
+    /* Animated background dots */
+    .error-page::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(245,158,11,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(59,130,246,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(139,92,246,0.06) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Floating grid pattern */
+    .error-page::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .error-container {
+      position: relative; z-index: 1;
+      text-align: center;
+      max-width: 600px; width: 100%;
+    }
+
+    /* Giant 404 */
+    .error-number {
+      font-size: clamp(100px, 22vw, 200px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 40%, #F59E0B 60%, #D97706 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0;
+      position: relative;
+      animation: float 4s ease-in-out infinite;
+      text-shadow: none;
+      filter: drop-shadow(0 0 40px rgba(245,158,11,0.3));
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+
+    /* Animated search icon between digits */
+    .error-number-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .error-emoji {
+      font-size: clamp(60px, 14vw, 100px);
+      display: block;
+      animation: spin-float 5s ease-in-out infinite;
+      margin: -10px 0 -20px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+
+    @keyframes spin-float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-8px) rotate(5deg); }
+    }
+
+    .error-title {
+      font-size: clamp(20px, 5vw, 32px);
+      font-weight: 800;
+      color: white;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .error-sub {
+      font-size: clamp(13px, 3vw, 16px);
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 32px;
+      line-height: 1.6;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Search box */
+    .error-search {
+      position: relative;
+      max-width: 380px;
+      margin: 0 auto 28px;
+    }
+    .error-search input {
+      width: 100%;
+      padding: 14px 20px 14px 50px;
+      border-radius: 100px;
+      border: 2px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: white;
+      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.2s, background 0.2s;
+      backdrop-filter: blur(10px);
+    }
+    .error-search input::placeholder { color: rgba(255,255,255,0.4); }
+    .error-search input:focus {
+      outline: none;
+      border-color: var(--amber);
+      background: rgba(255,255,255,0.12);
+    }
+    .error-search .search-icon {
+      position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+      font-size: 18px; color: rgba(255,255,255,0.5); pointer-events: none;
+    }
+    .error-search button {
+      position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+      padding: 8px 18px; background: var(--amber); color: var(--navy);
+      border-radius: 100px; font-size: 12px; font-weight: 700;
+      border: none; cursor: pointer; transition: background 0.15s;
+      font-family: 'Inter', sans-serif;
+    }
+    .error-search button:hover { background: var(--amber-dark); }
+
+    /* CTA Buttons */
+    .error-actions {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 36px;
+    }
+    .ea-btn {
+      padding: 11px 22px; border-radius: 100px; font-size: 13px; font-weight: 700;
+      transition: all 0.2s; display: inline-flex; align-items: center; gap: 7px;
+      cursor: pointer;
+    }
+    .ea-primary { background: var(--amber); color: var(--navy); }
+    .ea-primary:hover { background: var(--amber-dark); transform: translateY(-2px); }
+    .ea-ghost {
+      background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.2);
+      color: white;
+    }
+    .ea-ghost:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); }
+
+    /* Quick links */
+    .error-quick-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .eql-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 12px 14px;
+      text-align: left;
+      transition: all 0.18s;
+      display: flex; align-items: center; gap: 10px;
+      cursor: pointer;
+    }
+    .eql-card:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: rgba(245,158,11,0.3);
+      transform: translateY(-2px);
+    }
+    .eql-icon { font-size: 20px; flex-shrink: 0; }
+    .eql-text { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.88); }
+    .eql-desc { font-size: 10px; color: rgba(255,255,255,0.45); margin-top: 1px; }
+
+    /* Floating particles */
+    .particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .particle {
+      position: absolute;
+      width: 4px; height: 4px;
+      background: rgba(245,158,11,0.4);
+      border-radius: 50%;
+      animation: particle-float linear infinite;
+    }
+    @keyframes particle-float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 0.5; }
+      100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+    }
+
+    /* Mini header for 404 */
+    .mini-header {
+      position: fixed; top: 0; left: 0; right: 0;
+      background: rgba(10,35,66,0.9); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 200; padding: 12px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .mini-logo { display: flex; align-items: center; gap: 9px; color: white; }
+    .mini-logo-mark {
+      width: 30px; height: 30px;
+      background: rgba(245,158,11,0.2);
+      border: 1px solid rgba(245,158,11,0.3);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; font-size: 15px;
+    }
+    .mini-logo-text { font-size: 14px; font-weight: 800; letter-spacing: -0.02em; }
+    .mini-home {
+      padding: 7px 16px; background: var(--amber); color: var(--navy);
+      border-radius: 100px; font-size: 12px; font-weight: 700;
+      transition: background 0.15s;
+    }
+    .mini-home:hover { background: var(--amber-dark); }
+
+    /* Responsive */
+    @media (min-width: 480px) { .error-quick-links { grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 768px) { .error-page { padding-bottom: 60px; } }
+  </style>
+</head>
+<body>
+
+<!-- Mini Header -->
+<header class="mini-header" role="banner">
+  <a href="/" class="mini-logo" aria-label="SSC Exam Prep — Home">
+    <div class="mini-logo-mark" aria-hidden="true">🏛️</div>
+    <div class="mini-logo-text">SSCExamPrep</div>
+  </a>
+  <a href="/" class="mini-home">🏠 Go Home</a>
+</header>
+
+<!-- Main Error Page -->
+<div class="error-page" role="main">
+
+  <!-- Floating particles -->
+  <div class="particles" aria-hidden="true" id="particlesContainer"></div>
+
+  <div class="error-container">
+
+    <!-- 404 Number with emoji -->
+    <div style="margin-bottom: 16px">
+      <div class="error-emoji">🔍</div>
+      <div class="error-number" aria-label="Error 404">404</div>
+    </div>
+
+    <h1 class="error-title">Page Not Found!</h1>
+    <p class="error-sub">
+      Oops! The page you're looking for seems to have gone on exam leave. 
+      Let's get you back on track for your SSC preparation.
+    </p>
+
+    <!-- Search -->
+    <div class="error-search" role="search">
+      <span class="search-icon" aria-hidden="true">🔍</span>
+      <input
+        type="search"
+        id="errorSearch"
+        placeholder="Search SSC updates, syllabus, results…"
+        aria-label="Search SSC content"
+        autocomplete="off"
+      >
+      <button onclick="doSearch()" aria-label="Search">Go</button>
+    </div>
+
+    <!-- Action Buttons -->
+    <nav class="error-actions" aria-label="Error page navigation">
+      <a href="/" class="ea-btn ea-primary">🏠 Go to Homepage</a>
+      <a href="/latest-updates/" class="ea-btn ea-ghost">🔴 Latest Updates</a>
+      <a href="javascript:history.back()" class="ea-btn ea-ghost">← Go Back</a>
+    </nav>
+
+    <!-- Quick Links -->
+    <div class="error-quick-links" aria-label="Quick navigation links">
+      <a href="/ssc-cgl/" class="eql-card">
+        <div class="eql-icon">🎓</div>
+        <div><div class="eql-text">SSC CGL</div><div class="eql-desc">Graduate Level</div></div>
+      </a>
+      <a href="/ssc-chsl/" class="eql-card">
+        <div class="eql-icon">📋</div>
+        <div><div class="eql-text">SSC CHSL</div><div class="eql-desc">Higher Secondary</div></div>
+      </a>
+      <a href="/syllabus/" class="eql-card">
+        <div class="eql-icon">📚</div>
+        <div><div class="eql-text">Syllabus</div><div class="eql-desc">Exam-wise</div></div>
+      </a>
+      <a href="/results/" class="eql-card">
+        <div class="eql-icon">📊</div>
+        <div><div class="eql-text">Results</div><div class="eql-desc">Latest 2025</div></div>
+      </a>
+      <a href="/admit-cards/" class="eql-card">
+        <div class="eql-icon">🪪</div>
+        <div><div class="eql-text">Admit Cards</div><div class="eql-desc">Download Now</div></div>
+      </a>
+      <a href="/mock-tests/" class="eql-card">
+        <div class="eql-icon">✍️</div>
+        <div><div class="eql-text">Mock Tests</div><div class="eql-desc">Free Practice</div></div>
+      </a>
+      <a href="/answer-keys/" class="eql-card">
+        <div class="eql-icon">🗝️</div>
+        <div><div class="eql-text">Answer Keys</div><div class="eql-desc">Challenge Now</div></div>
+      </a>
+      <a href="/cut-off/" class="eql-card">
+        <div class="eql-icon">🎯</div>
+        <div><div class="eql-text">Cut-off</div><div class="eql-desc">Category-wise</div></div>
+      </a>
+    </div>
+
+    <!-- Error code note -->
+    <p style="margin-top:28px;font-size:11px;color:rgba(255,255,255,0.25)">
+      HTTP 404 · sscexamprep.online · The requested URL was not found on this server
+    </p>
+
+  </div>
+</div>
+
+<script>
+  // Search function
+  function doSearch() {
+    const q = document.getElementById('errorSearch').value.trim();
+    if (q) window.location.href = '/latest-updates/?q=' + encodeURIComponent(q);
+  }
+  document.getElementById('errorSearch').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') doSearch();
+  });
+
+  // Generate floating particles
+  function createParticles() {
+    const container = document.getElementById('particlesContainer');
+    const colors = ['rgba(245,158,11,0.4)', 'rgba(59,130,246,0.3)', 'rgba(139,92,246,0.3)', 'rgba(16,185,129,0.3)'];
+    for (let i = 0; i < 20; i++) {
+      const p = document.createElement('div');
+      p.classList.add('particle');
+      const size = Math.random() * 4 + 2;
+      p.style.cssText = `
+        width: ${size}px;
+        height: ${size}px;
+        left: ${Math.random() * 100}%;
+        animation-duration: ${Math.random() * 10 + 8}s;
+        animation-delay: ${Math.random() * 8}s;
+        background: ${colors[Math.floor(Math.random() * colors.length)]};
+        border-radius: 50%;
+      `;
+      container.appendChild(p);
+    }
+  }
+  createParticles();
+
+  // Auto-redirect countdown (optional) - commented out by default
+  // let countdown = 30;
+  // setInterval(() => { if (--countdown <= 0) window.location.href = '/'; }, 1000);
+</script>
+</body>
+</html>
