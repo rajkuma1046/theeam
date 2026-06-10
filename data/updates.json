@@ -1,4 +1,16 @@
 {
+  "id": 13,
+  "title": "SSC CGL 2026 Notification Released — Apply Online, Check Vacancies, Eligibility & Exam Dates",
+  "type": "notif",
+  "exam": "SSC CGL",
+  "date": " 21 May 2026",
+  "isNew": true,
+  "link": "",
+  "officialLink": "https://ssc.gov.in"
+},
+
+
+{
   "_note": "HOW TO ADD NEW UPDATES: Copy any item below, paste at the TOP of the 'items' array, change the id (increment by 1), fill in details. Types: result | admit | answer | notif | job",
   "_lastUpdated": "2025-06-10",
   "items": [
